@@ -2,11 +2,9 @@
     --bg-color: #fbfbfb;
     --text-color-primary: #1a1a1a;
     --text-color-faint: rgba(26, 26, 26, 0.3);
-    /* 30% opacity default */
+
     --text-color-correct: #1a1a1a;
-    /* 100% opacity */
     --text-color-error: #e63946;
-    /* Red for errors */
     --text-opacity-error: 0.5;
     --accent-color: #2563eb;
     --font-heading: 'Inter', sans-serif;
@@ -30,7 +28,6 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    /* Prevent scrolling during test */
 }
 
 .app-container {
@@ -91,11 +88,9 @@ header {
     font-size: 1.75rem;
     line-height: 1.6;
     color: var(--text-color-faint);
-    /* Default 30% opacity */
     word-break: break-word;
     white-space: pre-wrap;
     user-select: none;
-    /* Prevent selection */
     transition: opacity 0.2s;
 }
 
@@ -110,7 +105,6 @@ header {
 
 .char.correct {
     color: var(--text-color-correct);
-    /* 100% opacity */
 }
 
 .char.incorrect {
@@ -121,10 +115,8 @@ header {
 .char.current {
     border-left: 2px solid var(--accent-color);
     margin-left: -2px;
-    /* Pull back to not offset text */
 }
 
-/* Hidden input off-screen but functional for mobile keyboard */
 #hidden-input {
     position: absolute;
     opacity: 0;
@@ -132,7 +124,6 @@ header {
     top: -1000px;
 }
 
-/* Modal */
 .modal {
     position: fixed;
     top: 0;
@@ -214,4 +205,5 @@ header {
 
 .hidden {
     display: none !important;
+
 }
