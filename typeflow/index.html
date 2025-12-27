@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeFlow - Minimal Typing Speed Tester</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <h1 class="logo">TypeFlow</h1>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-label">Time</span>
+                <span class="stat-value" id="timer">0s</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">WPM</span>
+                <span class="stat-value" id="wpm">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Accuracy</span>
+                <span class="stat-value" id="accuracy">100%</span>
+            </div>
+        </div>
+
+        <div id="game-container" class="game-container">
+            <div id="text-display" class="text-display">
+                <!-- Text characters will be injected here -->
+                <div class="loading-text">Press any key to start...</div>
+            </div>
+            <div id="caret" class="caret hidden"></div>
+        </div>
+
+        <div id="results-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Test Complete</h2>
+                <div class="result-grid">
+                    <div class="result-item">
+                        <div class="result-label">WPM</div>
+                        <div class="result-value" id="final-wpm">0</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Accuracy</div>
+                        <div class="result-value" id="final-accuracy">0%</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Time</div>
+                        <div class="result-value" id="final-time">0s</div>
+                    </div>
+                </div>
+                <button id="restart-btn" class="primary-btn">Try Again</button>
+            </div>
+        </div>
+
+        <!-- Hidden input to trap focus for mobile support if needed, though mostly using window events -->
+        <input type="text" id="hidden-input" autocomplete="off" autocorrect="off" autocapitalize="off"
+            spellcheck="false">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
